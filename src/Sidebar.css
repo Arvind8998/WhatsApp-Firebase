@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     flex: 0.35;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 .sidebar__header{

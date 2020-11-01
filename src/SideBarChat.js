@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './Sidebarchat.css'
-import {Avatar} from '@material-ui/core';
+import {Avatar, IconButton} from '@material-ui/core';
 import db from './Firebase';
 import { Link } from 'react-router-dom';
+import ChatIcon from '@material-ui/icons/Chat';
 
 export default function SideBarChat({id='',name='',addnewChat=false}) {
 const [seed,setSeed] = useState("");
@@ -51,6 +52,9 @@ const createChat = ()=>{
     )
     :
     <div onClick = {createChat} className="sidebarChat">
-        <h2>Add new chat</h2>
+        <IconButton>
+            <ChatIcon />
+        </ IconButton>
+        <h2>Add new chat room</h2>
     </div>
 }
